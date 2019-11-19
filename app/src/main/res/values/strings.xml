@@ -2,4 +2,13 @@
     <string name="app_name">Quizz App</string>
     <string name="time">Time</string>
     <string name="reset">reset</string>
+    <string name="name">Enter Your Name</string>
+    <string name="question_1">Which food does NOT contain Vitamin D?</string>
+    <string name="question_2">_______ lowers levels of stress hormones and strengthens the immune system.</string>
+    <string name="question_3">Like a fingerprint, every person has a unique ________ print.</string>
+    <string name="question_4">When you sneeze, all of your bodily functions stop, even your heart. </string>
+    <string name="question_5">The _________ lobe is the area of the brain that allows humans to hear and understand people speaking. </string>
+    <string name="question_6">Yoga has a lot of surprising health benefits. Which of the following is NOT one of them?</string>
+    <string name="question_7">Your body uses ________ muscles to balance itself while standing still.</string>
+    <string name="question_8">It takes 17 muscles to smile and 43 to frown.</string>
 </resources>
