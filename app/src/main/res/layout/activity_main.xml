@@ -4,12 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".MainActivity">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </LinearLayout>
+        android:layout_height="65dp"
+        android:paddingTop="12dp"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/time"
+            android:textSize="25sp"
+            android:gravity="center_vertical"
+            android:textAllCaps="true"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_toLeftOf="@id/reset">
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/minute"
+                android:text="00"
+                android:textSize="25sp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="25sp"
+                android:layout_height="wrap_content"
+                android:text=":"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/second"
+                android:textSize="25sp"
+                android:text="00"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:text="@string/reset"
+            android:textAllCaps="true"
+            android:id="@+id/reset"
+            android:textSize="25sp"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
