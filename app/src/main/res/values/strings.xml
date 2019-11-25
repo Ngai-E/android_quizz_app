@@ -3,7 +3,7 @@
     <string name="time">Time</string>
     <string name="reset">reset</string>
     <string name="name">Enter Your Name</string>
-    <string name="question_1">Which food does NOT contain Vitamin D?</string>
+    <string name="question_1">Which foods contain Vitamin D?</string>
     <string name="question_2">_______ lowers levels of stress hormones and strengthens the immune system.</string>
     <string name="question_3">Like a fingerprint, every person has a unique ________ print.</string>
     <string name="question_4">When you sneeze, all of your bodily functions stop, even your heart. </string>
@@ -11,4 +11,26 @@
     <string name="question_6">Yoga has a lot of surprising health benefits. Which of the following is NOT one of them?</string>
     <string name="question_7">Your body uses ________ muscles to balance itself while standing still.</string>
     <string name="question_8">It takes 17 muscles to smile and 43 to frown.</string>
+    <string name="mushroom">Mushroom</string>
+    <string name="tofu">Tofu</string>
+    <string name="caviar">Caviar</string>
+    <string name="kale">Kale</string>
+    <string name="laughter">Laughter</string>
+    <string name="naps">Taking naps</string>
+    <string name="reading">Reading</string>
+    <string name="singing">Singing</string>
+    <string name="nose">Nose</string>
+    <string name="tongue">Tongue</string>
+    <string name="elbow">Elbow</string>
+    <string name="toe">Toe</string>
+    <string name="str_true">True</string>
+    <string name="str_false">False</string>
+    <string name="frontal">Frontal</string>
+    <string name="parietal">Parietal</string>
+    <string name="temporal">Temporal</string>
+    <string name="occipital">Occipital</string>
+    <string name="improves_stamina">Improves stamina</string>
+    <string name="boosts_immunity">Boosts immunity</string>
+    <string name="eases_migrane">Eases migraines</string>
+    <string name="sleeps_better">Helps you sleep better</string>
 </resources>
