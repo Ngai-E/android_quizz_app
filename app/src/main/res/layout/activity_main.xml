@@ -2,9 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    style="@style/vetLinearLayout"
     android:padding="15dp"
     tools:context=".MainActivity">
     <RelativeLayout
@@ -12,44 +10,35 @@
         android:layout_height="65dp"
         android:layout_marginBottom="12dp">
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            style="@style/wrapMatchContent"
             android:text="@string/time"
             android:textSize="25sp"
             android:gravity="center_vertical"
             android:textAllCaps="true"/>
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_toLeftOf="@id/reset">
+            style="@style/timeLayout">
             <TextView
-                android:layout_width="wrap_content"
+                style="@style/wrapWrapContent"
                 android:id="@+id/minute"
                 android:text="00"
-                android:textSize="25sp"
-                android:layout_height="wrap_content" />
+                android:textSize="25sp" />
             <TextView
-                android:layout_width="wrap_content"
                 android:textSize="25sp"
-                android:layout_height="wrap_content"
-                android:text=":"/>
+                android:text=":"
+                style="@style/wrapWrapContent"/>
             <TextView
-                android:layout_width="wrap_content"
                 android:id="@+id/second"
                 android:textSize="25sp"
                 android:text="00"
-                android:layout_height="wrap_content" />
+                style="@style/wrapWrapContent" />
         </LinearLayout>
         <Button
-            android:layout_width="wrap_content"
+            style="@style/wrapMatchContent"
             android:text="@string/reset"
             android:textAllCaps="true"
             android:id="@+id/reset"
             android:textSize="25sp"
-            android:layout_alignParentRight="true"
-            android:layout_height="match_parent" />
+            android:layout_alignParentRight="true" />
     </RelativeLayout>
     <EditText
         android:layout_width="match_parent"
@@ -58,50 +47,199 @@
         android:id="@+id/name"
         android:layout_height="wrap_content" />
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        style="@style/matchMatchWidthHeight">
+
+        <!--question one -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            style="@style/vetLinearLayout">
             <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
+                style="@style/vetLinearLayout">
                 <ImageView
+                    style="@style/quizImage"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/quizz_1"
-                    />
+                    android:layout_height="200dp"
+                    android:src="@drawable/quizz_1" />
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/wrapWrapContent"
                     android:text="@string/question_1"
                     android:textSize="20sp"/>
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-                    <CheckBox android:id="@+id/_1a"
-                        android:layout_weight="1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    style="@style/wrapWrapContent"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/_1a"
+                        style="@style/answerCheckbox"
                         android:text="@string/mushroom"/>
-                    <CheckBox android:id="@+id/_1b"
-                        android:layout_weight="1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <CheckBox
+                        android:id="@+id/_1b"
+                        style="@style/answerCheckbox"
                         android:text="@string/tofu"/>
-                    <CheckBox android:id="@+id/_1c"
-                        android:layout_weight="1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <CheckBox
+                        android:id="@+id/_1c"
+                        style="@style/answerCheckbox"
                         android:text="@string/caviar"/>
-                    <CheckBox android:id="@+id/_1d"
-                        android:layout_weight="1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <CheckBox
+                        android:id="@+id/_1d"
+                        style="@style/answerCheckbox"
                         android:text="@string/kale"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--question two-->
+            <LinearLayout
+                style="@style/vetLinearLayout">
+                <ImageView
+                    style="@style/quizImage"
+                    android:src="@drawable/quizz_2"
+                    />
+                <TextView
+                    style="@style/wrapWrapContent"
+                    android:text="@string/question_2"
+                    android:textSize="20sp"/>
+                <LinearLayout
+                    style="@style/wrapWrapContent"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/_2a"
+                        style="@style/answerCheckbox"
+                        android:text="@string/laughter"/>
+                    <CheckBox
+                        android:id="@+id/_2b"
+                        style="@style/answerCheckbox"
+                        android:text="@string/naps"/>
+                    <CheckBox
+                        android:id="@+id/_2c"
+                        style="@style/answerCheckbox"
+                        android:text="@string/reading"/>
+                    <CheckBox
+                        android:id="@+id/_2d"
+                        style="@style/answerCheckbox"
+                        android:text="@string/singing"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--question three-->
+            <LinearLayout
+                style="@style/vetLinearLayout">
+                <ImageView
+                    style="@style/quizImage"
+                    android:src="@drawable/quizz_3"
+                    />
+                <TextView
+                    style="@style/wrapWrapContent"
+                    android:text="@string/question_3"
+                    android:textSize="20sp"/>
+                <LinearLayout
+                    style="@style/wrapWrapContent"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/_3a"
+                        style="@style/answerCheckbox"
+                        android:text="@string/nose"/>
+                    <CheckBox
+                        android:id="@+id/_3b"
+                        style="@style/answerCheckbox"
+                        android:text="@string/tongue"/>
+                    <CheckBox
+                        android:id="@+id/_3c"
+                        style="@style/answerCheckbox"
+                        android:text="@string/elbow"/>
+                    <CheckBox
+                        android:id="@+id/_3d"
+                        style="@style/answerCheckbox"
+                        android:text="@string/toe"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--question four-->
+            <LinearLayout
+                style="@style/vetLinearLayout">
+                <ImageView
+                    style="@style/quizImage"
+                    android:src="@drawable/quizz_4"
+                    />
+                <TextView
+                    style="@style/wrapWrapContent"
+                    android:text="@string/question_4"
+                    android:textSize="20sp"/>
+                <RadioGroup
+                    style="@style/horLinearLayout">
+                    <RadioButton
+                        android:id="@+id/_4a"
+                        style="@style/wrapWrapContent"
+                        android:text="@string/str_true"/>
+                    <RadioButton
+                        android:id="@+id/_4b"
+                        style="@style/wrapWrapContent"
+                        android:text="@string/str_false"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--question five-->
+            <LinearLayout
+                style="@style/vetLinearLayout">
+                <ImageView
+                    style="@style/quizImage"
+                    android:src="@drawable/quizz_5"
+                    />
+                <TextView
+                    style="@style/wrapWrapContent"
+                    android:text="@string/question_5"
+                    android:textSize="20sp"/>
+                <LinearLayout
+                    style="@style/wrapWrapContent"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/_5a"
+                        style="@style/answerCheckbox"
+                        android:text="@string/frontal"/>
+                    <CheckBox
+                        android:id="@+id/_5b"
+                        style="@style/answerCheckbox"
+                        android:text="@string/parietal"/>
+                    <CheckBox
+                        android:id="@+id/_5c"
+                        style="@style/answerCheckbox"
+                        android:text="@string/temporal"/>
+                    <CheckBox
+                        android:id="@+id/_5d"
+                        style="@style/answerCheckbox"
+                        android:text="@string/occipital"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!--question six-->
+            <LinearLayout
+                style="@style/vetLinearLayout">
+                <TextView
+                    android:text="Question 1"
+                    style="@style/wrapWrapContent"/>
+                <ImageView
+                    style="@style/quizImage"
+                    android:src="@drawable/quizz_6"
+                    />
+                <TextView
+                    style="@style/wrapWrapContent"
+                    android:text="@string/question_6"
+                    android:textSize="20sp"/>
+                <LinearLayout
+                    style="@style/wrapWrapContent"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/_6a"
+                        style="@style/answerCheckbox"
+                        android:text="@string/improves_stamina"/>
+                    <CheckBox
+                        android:id="@+id/_6b"
+                        style="@style/answerCheckbox"
+                        android:text="@string/boosts_immunity"/>
+                    <CheckBox
+                        android:id="@+id/_6c"
+                        style="@style/answerCheckbox"
+                        android:text="@string/eases_migrane"/>
+                    <CheckBox
+                        android:id="@+id/_6d"
+                        style="@style/answerCheckbox"
+                        android:text="@string/sleeps_better"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

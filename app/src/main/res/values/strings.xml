@@ -33,4 +33,10 @@
     <string name="boosts_immunity">Boosts immunity</string>
     <string name="eases_migrane">Eases migraines</string>
     <string name="sleeps_better">Helps you sleep better</string>
+    <string name="number_1">Question 1</string>
+    <string name="number_2">Question 2</string>
+    <string name="number_3">Question 3</string>
+    <string name="number_4">Question 4</string>
+    <string name="number_5">Question 5</string>
+    <string name="number_6">Question 6</string>
 </resources>
