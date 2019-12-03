@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
      7: c
      8 : a
      **/
+    int totalScore = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
