@@ -39,4 +39,8 @@
     <string name="number_4">Question 4</string>
     <string name="number_5">Question 5</string>
     <string name="number_6">Question 6</string>
+    <string name="start_quizz">Start Quizz</string>
+    <string name="health_quiz">Health Quizz</string>
+    <string name="submit">Submit</string>
+    <string name="credits"><a href="https://www.proprofs.com/quiz-school/story.php?title=pq-test-your-knowledge-on-health-and-body"></a>Credits for questions and images</string>
 </resources>

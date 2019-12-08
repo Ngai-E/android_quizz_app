@@ -11,41 +11,25 @@
         android:layout_marginBottom="12dp">
         <TextView
             style="@style/wrapMatchContent"
-            android:text="@string/time"
+            android:text="@string/health_quiz"
             android:textSize="25sp"
             android:gravity="center_vertical"
-            android:textAllCaps="true"/>
-        <LinearLayout
-            style="@style/timeLayout">
-            <TextView
-                style="@style/wrapWrapContent"
-                android:id="@+id/minute"
-                android:text="00"
-                android:textSize="25sp" />
-            <TextView
-                android:textSize="25sp"
-                android:text=":"
-                style="@style/wrapWrapContent"/>
-            <TextView
-                android:id="@+id/second"
-                android:textSize="25sp"
-                android:text="00"
-                style="@style/wrapWrapContent" />
-        </LinearLayout>
+            android:textAllCaps="true"
+            />
         <Button
             style="@style/wrapMatchContent"
             android:text="@string/reset"
             android:textAllCaps="true"
             android:id="@+id/reset"
             android:textSize="25sp"
+            android:onClick="reset"
             android:layout_alignParentRight="true" />
     </RelativeLayout>
     <EditText
-        android:layout_width="match_parent"
+        style="@style/matchWrapContent"
         android:hint="@string/name"
         android:padding="12dp"
-        android:id="@+id/name"
-        android:layout_height="wrap_content" />
+        android:id="@+id/name" />
     <ScrollView
         style="@style/matchMatchWidthHeight">
 
@@ -65,7 +49,7 @@
                     android:textSize="20sp"/>
                 <LinearLayout
                     style="@style/wrapWrapContent"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
                     <CheckBox
                         android:id="@+id/_1a"
                         style="@style/answerCheckbox"
@@ -83,6 +67,11 @@
                         style="@style/answerCheckbox"
                         android:text="@string/kale"/>
                 </LinearLayout>
+
+                <TextView
+                    style="@style/wrapWrapContent"
+                    android:text="@string/question_2"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <!--question two-->
@@ -92,30 +81,27 @@
                     style="@style/quizImage"
                     android:src="@drawable/quizz_2"
                     />
-                <TextView
+
+                <RadioGroup
                     style="@style/wrapWrapContent"
-                    android:text="@string/question_2"
-                    android:textSize="20sp"/>
-                <LinearLayout
-                    style="@style/wrapWrapContent"
-                    android:orientation="horizontal">
-                    <CheckBox
+                    android:orientation="vertical">
+                    <RadioButton
                         android:id="@+id/_2a"
                         style="@style/answerCheckbox"
                         android:text="@string/laughter"/>
-                    <CheckBox
+                    <RadioButton
                         android:id="@+id/_2b"
                         style="@style/answerCheckbox"
                         android:text="@string/naps"/>
-                    <CheckBox
+                    <RadioButton
                         android:id="@+id/_2c"
                         style="@style/answerCheckbox"
                         android:text="@string/reading"/>
-                    <CheckBox
+                    <RadioButton
                         android:id="@+id/_2d"
                         style="@style/answerCheckbox"
                         android:text="@string/singing"/>
-                </LinearLayout>
+                </RadioGroup>
             </LinearLayout>
 
             <!--question three-->
@@ -129,26 +115,26 @@
                     style="@style/wrapWrapContent"
                     android:text="@string/question_3"
                     android:textSize="20sp"/>
-                <LinearLayout
+                <RadioGroup
                     style="@style/wrapWrapContent"
-                    android:orientation="horizontal">
-                    <CheckBox
+                    android:orientation="vertical">
+                    <RadioButton
                         android:id="@+id/_3a"
                         style="@style/answerCheckbox"
                         android:text="@string/nose"/>
-                    <CheckBox
+                    <RadioButton
                         android:id="@+id/_3b"
                         style="@style/answerCheckbox"
                         android:text="@string/tongue"/>
-                    <CheckBox
+                    <RadioButton
                         android:id="@+id/_3c"
                         style="@style/answerCheckbox"
                         android:text="@string/elbow"/>
-                    <CheckBox
+                    <RadioButton
                         android:id="@+id/_3d"
                         style="@style/answerCheckbox"
                         android:text="@string/toe"/>
-                </LinearLayout>
+                </RadioGroup>
             </LinearLayout>
 
             <!--question four-->
@@ -186,26 +172,26 @@
                     style="@style/wrapWrapContent"
                     android:text="@string/question_5"
                     android:textSize="20sp"/>
-                <LinearLayout
+                <RadioGroup
                     style="@style/wrapWrapContent"
-                    android:orientation="horizontal">
-                    <CheckBox
+                    android:orientation="vertical">
+                    <RadioButton
                         android:id="@+id/_5a"
                         style="@style/answerCheckbox"
                         android:text="@string/frontal"/>
-                    <CheckBox
+                    <RadioButton
                         android:id="@+id/_5b"
                         style="@style/answerCheckbox"
                         android:text="@string/parietal"/>
-                    <CheckBox
+                    <RadioButton
                         android:id="@+id/_5c"
                         style="@style/answerCheckbox"
                         android:text="@string/temporal"/>
-                    <CheckBox
+                    <RadioButton
                         android:id="@+id/_5d"
                         style="@style/answerCheckbox"
                         android:text="@string/occipital"/>
-                </LinearLayout>
+                </RadioGroup>
             </LinearLayout>
             <!--question six-->
             <LinearLayout
@@ -221,28 +207,37 @@
                     style="@style/wrapWrapContent"
                     android:text="@string/question_6"
                     android:textSize="20sp"/>
-                <LinearLayout
+                <RadioGroup
                     style="@style/wrapWrapContent"
-                    android:orientation="horizontal">
-                    <CheckBox
+                    android:orientation="vertical">
+                    <RadioButton
                         android:id="@+id/_6a"
                         style="@style/answerCheckbox"
                         android:text="@string/improves_stamina"/>
-                    <CheckBox
+                    <RadioButton
                         android:id="@+id/_6b"
                         style="@style/answerCheckbox"
                         android:text="@string/boosts_immunity"/>
-                    <CheckBox
+                    <RadioButton
                         android:id="@+id/_6c"
                         style="@style/answerCheckbox"
                         android:text="@string/eases_migrane"/>
-                    <CheckBox
+                    <RadioButton
                         android:id="@+id/_6d"
                         style="@style/answerCheckbox"
                         android:text="@string/sleeps_better"/>
-                </LinearLayout>
+                </RadioGroup>
             </LinearLayout>
+            <Button
+               style="@style/wrapMatchContent"
+                android:text="@string/submit"
+                android:onClick="submit"/>
+            <TextView
+                style="@style/matchWrapContent"
+                android:text="@string/credits"
+                android:autoLink="web"
+                android:linksClickable="true"
+                />
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>
