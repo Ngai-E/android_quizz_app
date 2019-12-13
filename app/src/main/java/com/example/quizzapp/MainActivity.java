@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.NumberFormat;
 import java.util.concurrent.TimeUnit;
 
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
      7: c
      8 : a
      **/
+//questions and pictures taken from 'https://www.proprofs.com/quiz-school/story.php?title=pq-test-your-knowledge-on-health-and-body'
     int totalScore = 0;
     String name = "";
     @Override
@@ -37,8 +39,11 @@ public class MainActivity extends AppCompatActivity {
        EditText editText = (EditText) findViewById(R.id.name);
        name = editText.getText().toString();
        gradeUser();
-       Toast toast = Toast.makeText(getApplicationContext(), "Sending results...", Toast.LENGTH_SHORT);
-       toast.show();
+//       Toast toast = Toast.makeText(getApplicationContext(), "Sending results...", Toast.LENGTH_SHORT);
+//       toast.show();
+       String summary = this.getSummary();
+        TextView textView = (TextView) findViewById(R.id.results);
+        textView.setText(summary);
     }
 
     private void  gradeUser() {
@@ -97,6 +102,12 @@ public class MainActivity extends AppCompatActivity {
     public  void reset(View  view){
      this.totalScore = 0;
      this.name = "";
+    }
+    private String getSummary() {
+        String summary = "Name: " + this.name ;
+        summary += "\n Health quiz score is " + this.totalScore + '/' + "6";
+        summary += "\n" + "Thank you!";
+        return  summary;
     }
 
 }

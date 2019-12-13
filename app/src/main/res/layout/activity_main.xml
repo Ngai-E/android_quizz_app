@@ -16,14 +16,14 @@
             android:gravity="center_vertical"
             android:textAllCaps="true"
             />
-        <Button
-            style="@style/wrapMatchContent"
-            android:text="@string/reset"
-            android:textAllCaps="true"
-            android:id="@+id/reset"
-            android:textSize="25sp"
-            android:onClick="reset"
-            android:layout_alignParentRight="true" />
+        <!--<Button-->
+            <!--style="@style/wrapMatchContent"-->
+            <!--android:text="@string/reset"-->
+            <!--android:textAllCaps="true"-->
+            <!--android:id="@+id/reset"-->
+            <!--android:textSize="25sp"-->
+            <!--android:onClick="reset"-->
+            <!--android:layout_alignParentRight="true" />-->
     </RelativeLayout>
     <EditText
         style="@style/matchWrapContent"
@@ -196,9 +196,6 @@
             <!--question six-->
             <LinearLayout
                 style="@style/vetLinearLayout">
-                <TextView
-                    android:text="Question 1"
-                    style="@style/wrapWrapContent"/>
                 <ImageView
                     style="@style/quizImage"
                     android:src="@drawable/quizz_6"
@@ -228,16 +225,19 @@
                         android:text="@string/sleeps_better"/>
                 </RadioGroup>
             </LinearLayout>
-            <Button
-               style="@style/wrapMatchContent"
-                android:text="@string/submit"
-                android:onClick="submit"/>
-            <TextView
-                style="@style/matchWrapContent"
-                android:text="@string/credits"
-                android:autoLink="web"
-                android:linksClickable="true"
-                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+                <TextView
+                    style="@style/matchWrapContent"
+                    android:textSize="20sp"
+                    android:id="@+id/results"
+                    />
+                <Button
+                    style="@style/wrapMatchContent"
+                    android:text="@string/submit"
+                    android:onClick="submit"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
