@@ -42,5 +42,7 @@
     <string name="start_quizz">Start Quizz</string>
     <string name="health_quiz">Health Quizz</string>
     <string name="submit">Submit</string>
+    <string name="answer_here">Answer here</string>
+    <string name="text_quiz">Missed period, nausea, vomiting, increased heart rate, morning sickess are all primary signs of ___ (please use just one word)</string>
     <string name="credits"><a href="https://www.proprofs.com/quiz-school/story.php?title=pq-test-your-knowledge-on-health-and-body"></a>Credits for questions and images</string>
 </resources>

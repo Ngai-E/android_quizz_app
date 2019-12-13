@@ -1,18 +1,12 @@
 package com.example.quizzapp;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.text.NumberFormat;
-import java.util.concurrent.TimeUnit;
-
 
 public class MainActivity extends AppCompatActivity {
     /**
@@ -23,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
      5: c
      6: a
      7: c
-     8 : a
      **/
 //questions and pictures taken from 'https://www.proprofs.com/quiz-school/story.php?title=pq-test-your-knowledge-on-health-and-body'
     int totalScore = 0;
@@ -39,40 +32,31 @@ public class MainActivity extends AppCompatActivity {
        EditText editText = (EditText) findViewById(R.id.name);
        name = editText.getText().toString();
        gradeUser();
-//       Toast toast = Toast.makeText(getApplicationContext(), "Sending results...", Toast.LENGTH_SHORT);
-//       toast.show();
        String summary = this.getSummary();
-        TextView textView = (TextView) findViewById(R.id.results);
-        textView.setText(summary);
+       TextView textView = (TextView) findViewById(R.id.results);
+       textView.setText(summary);
+       String toastMessage = "";
+       if (this.totalScore >= 3) {
+           toastMessage = "You Passed! Your score is " + totalScore + "/" + "6";
+       } else {
+           toastMessage = "Sorry, You did not pass. Your score is"  + totalScore + "/" + "6";
+       }
+       Toast toast = Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_LONG);
+       toast.show();
     }
 
     private void  gradeUser() {
-        CheckBox checkBox;
+        CheckBox a, b, c, d;
         RadioButton radioButton;
-        int test = 0;
 
         //grade question one
-        checkBox = (CheckBox) findViewById(R.id._1a);
-        if (checkBox.isChecked()) {
-            test++;
-        }
-        checkBox = (CheckBox) findViewById(R.id._1b);
-        if (checkBox.isChecked()) {
-            test++;
-        }
-        checkBox = (CheckBox) findViewById(R.id._1c);
-        if (checkBox.isChecked()) {
-            test++;
-        }
-        checkBox = (CheckBox) findViewById(R.id._1c);
-        if (checkBox.isChecked()) {
-            test = -1;
-        }
-
-        if (test == 3) {
+        a = (CheckBox) findViewById(R.id._1a);
+        b = (CheckBox) findViewById(R.id._1b);
+        c = (CheckBox) findViewById(R.id._1c);
+        d = (CheckBox) findViewById(R.id._1c);
+        if (a.isChecked() && b.isChecked() && c.isChecked() && !d.isChecked()) {
             this.totalScore++;
         }
-
         //grade question two
         radioButton = (RadioButton) findViewById(R.id._2a);
         if (radioButton.isChecked()) {
@@ -96,6 +80,11 @@ public class MainActivity extends AppCompatActivity {
         //grade question six
         radioButton = (RadioButton) findViewById(R.id._6a);
         if (radioButton.isChecked()) {
+            this.totalScore++;
+        }
+        //grade question seven
+        EditText editText = (EditText) findViewById(R.id.text_quiz);
+        if (editText.getText().toString().toLowerCase().trim() == "pregnancy" ) {
             this.totalScore++;
         }
     }

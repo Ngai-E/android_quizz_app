@@ -16,14 +16,6 @@
             android:gravity="center_vertical"
             android:textAllCaps="true"
             />
-        <!--<Button-->
-            <!--style="@style/wrapMatchContent"-->
-            <!--android:text="@string/reset"-->
-            <!--android:textAllCaps="true"-->
-            <!--android:id="@+id/reset"-->
-            <!--android:textSize="25sp"-->
-            <!--android:onClick="reset"-->
-            <!--android:layout_alignParentRight="true" />-->
     </RelativeLayout>
     <EditText
         style="@style/matchWrapContent"
@@ -224,6 +216,19 @@
                         style="@style/answerCheckbox"
                         android:text="@string/sleeps_better"/>
                 </RadioGroup>
+            </LinearLayout>
+            <!--question seven-->
+            <LinearLayout
+                style="@style/vetLinearLayout">
+                <TextView
+                    style="@style/wrapWrapContent"
+                    android:text="@string/text_quiz"
+                    android:textSize="20sp"/>
+                <EditText
+                    style="@style/matchWrapContent"
+                    android:hint="@string/answer_here"
+                    android:padding="12dp"
+                    android:id="@+id/text_quiz"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
